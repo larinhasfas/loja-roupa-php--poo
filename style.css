@@ -1,0 +1,96 @@
+
+.gradient-text {
+    font-size: 3.5rem; 
+    font-weight: 900;
+    line-height: 1.1;
+    display: inline-block; 
+    
+    /* Degradê: Azul escuro (#02104b) para Roxo Claro (#a29bfe) */
+    background: linear-gradient(135deg, #02104b 10%, #8e44ad 60%, #a29bfe 100%);
+    
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+
+.gradient-text span {
+    color: inherit;
+}
+
+/* --- Configuração do Cabeçalho (Topo) --- */
+.cabecalho {
+    position: fixed; /* Deixa o menu fixo no topo ao rolar a página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Define uma altura fixa para o topo */
+    background: linear-gradient(180deg, #0b1120 0%, rgba(11, 17, 32, 0.8) 100%); 
+    /* Um fundo Azul Espacial com leve transparência no final */
+    
+    display: flex; /* Alinha os elementos em linha */
+    justify-content: space-between; /* Espaça: Logo à esquerda, Menu no centro, Pesquisa à direita */
+    align-items: center; /* Centraliza verticalmente */
+    
+    padding: 0 50px; /* Dá um espaçamento nas laterais */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do header */
+    
+    z-index: 1000; /* Garante que o topo fique acima de tudo */
+    border-bottom: 1px solid rgba(162, 155, 254, 0.2); /* Uma linha sutil roxa no fundo */
+}
+
+/* --- Estilização do Logotipo --- */
+#logo {
+    height: 60px; /* Controla a altura do seu logo */
+    width: auto; /* Mantém a proporção da imagem */
+    
+    /* Um leve brilho azul em volta do logo para dar um ar 'tech' */
+    filter: drop-shadow(0px 0px 10px rgba(0, 212, 255, 0.4));
+    
+    transition: transform 0.3s ease; /* Animação suave */
+}
+
+/* Efeito ao passar o mouse no logo */
+#logo:hover {
+    transform: scale(1.05); /* Dá um leve zoom */
+}
+
+/* --- Estilização do Menu de Navegação --- */
+.menu {
+    display: flex;
+    gap: 25px; /* Espaço entre as opções do menu */
+}
+
+.menu a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #cbd5e1; /* Um cinza azulado claro para os links */
+    font-family: 'Poppins', sans-serif; /* Uma fonte gamer/moderna */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+/* Efeito ao passar o mouse no menu */
+.menu a:hover {
+    color: #a29bfe; /* O roxo claro do seu degradê */
+    text-shadow: 0px 0px 5px rgba(162, 155, 254, 0.7); /* Brilho sutil */
+}
+
+/* --- Ajuste para a Barra de Pesquisa --- */
+.barra-de-pesquisa {
+    display: flex;
+    align-items: center;
+}
+
+.barra-de-pesquisa input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(162, 155, 254, 0.3);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    font-family: sans-serif;
+}
